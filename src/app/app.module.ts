@@ -7,10 +7,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeMainComponent } from './components/home-main/home-main.component';
 import { HeaderComponent } from './components/header/header.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
 
 
 const appRoutes: Routes = [
-  {path:'holi',component:HomeMainComponent  },
+  {path:'',component:HomeMainComponent  },
 
 
 
@@ -19,7 +20,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeMainComponent,
-    HeaderComponent
+    HeaderComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
