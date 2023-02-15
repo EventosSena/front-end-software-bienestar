@@ -11,7 +11,8 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 
 
 const appRoutes: Routes = [
-  {path:'',component:HomeMainComponent  },
+  {path:'',component:HomeMainComponent},
+  {path:'signin',component:SignInComponent},
 
 
 
