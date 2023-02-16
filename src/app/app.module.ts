@@ -17,9 +17,9 @@ import { ListAllAprendizComponent } from './components/list-all-aprendiz/list-al
 const appRoutes: Routes = [
   {path:'',component:HomeMainComponent},
   {path:'signin',component:SignInComponent},
-
-
-
+  {path:'registeraprendiz',component:RegisterAprendizComponent },
+  {path:'updateaprendiz',component:UpdateAprendizComponent },
+  {path:'listalllaprendiz',component:ListAllAprendizComponent },
 ]
 @NgModule({
   declarations: [
