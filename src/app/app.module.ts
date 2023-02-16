@@ -2,12 +2,16 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeMainComponent } from './components/home-main/home-main.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
+import { RegisterAprendizComponent } from './components/register-aprendiz/register-aprendiz.component';
+import { UpdateAprendizComponent } from './components/update-aprendiz/update-aprendiz.component';
+import { ListAllAprendizComponent } from './components/list-all-aprendiz/list-all-aprendiz.component';
 
 
 const appRoutes: Routes = [
@@ -22,7 +26,10 @@ const appRoutes: Routes = [
     AppComponent,
     HomeMainComponent,
     HeaderComponent,
-    SignInComponent
+    SignInComponent,
+    RegisterAprendizComponent,
+    UpdateAprendizComponent,
+    ListAllAprendizComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +37,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     FormsModule,
     ReactiveFormsModule, 
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
