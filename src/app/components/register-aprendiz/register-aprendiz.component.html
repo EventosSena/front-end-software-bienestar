@@ -2,11 +2,11 @@
     <div class="login-info-container">
       <h1 class="title">Registro Aprendiz</h1>
       <form class="inputs-container" >
-          <input class="input" type="text" placeholder="Nombre Completo" id=" " name="" >
-          <input class="input" type="text" placeholder="documento " id="" name="">
-          <input class="input" type="text" placeholder="correo" id="" name="">
-          <input class="input" type="text" placeholder="Programa de formacion" id="" name="">
-          <button class="btn" type="submit">Registrar</button>
+          <input class="input" type="text" placeholder="Nombre Completo" [(ngModel)] = "aprendiz.name" id="name" name="name" >
+          <input class="input" type="number" placeholder="documento " [(ngModel)]= "aprendiz.document" id="document" name="document">
+          <input class="input" type="text" placeholder="correo" [(ngModel)]="aprendiz.email" id="email" name="email">
+          <input class="input" type="text" placeholder="Programa de formacion" [(ngModel)]="aprendiz.course" id=" course" name=" course">
+          <button class="btn" type="submit"(click)="saveAprendiz()" >Registrar</button>
       </form>
     </div>
 </div>
