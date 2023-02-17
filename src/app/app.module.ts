@@ -12,14 +12,16 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { RegisterAprendizComponent } from './components/register-aprendiz/register-aprendiz.component';
 import { UpdateAprendizComponent } from './components/update-aprendiz/update-aprendiz.component';
 import { ListAllAprendizComponent } from './components/list-all-aprendiz/list-all-aprendiz.component';
+import { ConstructionComponent } from './components/construction/construction.component';
 
 
 const appRoutes: Routes = [
-  {path:'',component:HomeMainComponent},
+  {path:'home',component:HomeMainComponent},
   {path:'signin',component:SignInComponent},
   {path:'registeraprendiz',component:RegisterAprendizComponent },
   {path:'updateaprendiz',component:UpdateAprendizComponent },
   {path:'listalllaprendiz',component:ListAllAprendizComponent },
+  {path:'',component:ConstructionComponent },
 ]
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ const appRoutes: Routes = [
     SignInComponent,
     RegisterAprendizComponent,
     UpdateAprendizComponent,
-    ListAllAprendizComponent
+    ListAllAprendizComponent,
+    ConstructionComponent
   ],
   imports: [
     BrowserModule,
