@@ -1,15 +1,15 @@
-export class Aprendiz{
-
-    document:number;
-    name:string;
+export class Aprendiz {
+    document:Number;
+    full_name:string;
     email:string;
     course:string;
 
-
-    constructor() { 
+    constructor(){
         this.document=0;
-        this.name='';
+        this.full_name='';
         this.email='';
-        this.course=''
+        this.course='';
     }
+
+
 }

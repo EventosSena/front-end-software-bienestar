@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Aprendiz } from 'src/app/models/Aprendiz';
 
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -10,9 +12,9 @@ export class AprendizService {
 
   constructor(private httpcient:HttpClient) { }
 
-  saveAprendiz(newAprendiz: Aprendiz): Observable<object>{
+  saveAprendiz(newAprendiz: Aprendiz): Observable<Aprendiz>{
 
-    return this.httpcient.post("http://localhost:4200/aprendiz/save", newAprendiz);
+    return this.httpcient.post<Aprendiz>("http://localhost:4200/aprendiz/save", newAprendiz);
     
   }
 }

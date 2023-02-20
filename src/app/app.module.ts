@@ -16,12 +16,12 @@ import { ConstructionComponent } from './components/construction/construction.co
 
 
 const appRoutes: Routes = [
-  {path:'home',component:HomeMainComponent},
+  {path:'',component:HomeMainComponent},
   {path:'signin',component:SignInComponent},
   {path:'registeraprendiz',component:RegisterAprendizComponent },
   {path:'updateaprendiz',component:UpdateAprendizComponent },
   {path:'listalllaprendiz',component:ListAllAprendizComponent },
-  {path:'',component:ConstructionComponent },
+  {path:'constructor',component:ConstructionComponent },
 ]
 @NgModule({
   declarations: [
