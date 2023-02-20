@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Aprendiz } from 'src/app/models/Aprendiz';
 import { AprendizService } from 'src/app/services/aprendiz/aprendiz.service';
 import { Router } from '@angular/router';
+import { Aprendiz } from 'src/app/models/Aprendiz';
 @Component({
   selector: 'app-register-aprendiz',
   templateUrl: './register-aprendiz.component.html',
