@@ -13,6 +13,9 @@ import { RegisterAprendizComponent } from './components/register-aprendiz/regist
 import { UpdateAprendizComponent } from './components/update-aprendiz/update-aprendiz.component';
 import { ListAllAprendizComponent } from './components/list-all-aprendiz/list-all-aprendiz.component';
 import { ConstructionComponent } from './components/construction/construction.component';
+import { ListAllResponsibleComponent } from './components/list-all-responsible/list-all-responsible.component';
+import { RegisterResponsibleComponent } from './components/register-responsible/register-responsible.component';
+import { UpdateResponsibleComponent } from './components/update-responsible/update-responsible.component';
 
 
 const appRoutes: Routes = [
@@ -32,7 +35,10 @@ const appRoutes: Routes = [
     RegisterAprendizComponent,
     UpdateAprendizComponent,
     ListAllAprendizComponent,
-    ConstructionComponent
+    ConstructionComponent,
+    ListAllResponsibleComponent,
+    RegisterResponsibleComponent,
+    UpdateResponsibleComponent
   ],
   imports: [
     BrowserModule,
