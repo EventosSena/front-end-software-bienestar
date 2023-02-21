@@ -8,6 +8,7 @@ import { AprendizService } from 'src/app/services/aprendiz/aprendiz.service';
 })
 export class ListAllAprendizComponent {
 
+
   Aprendiz:any=[];
 
   constructor(private serviceaprendiz:AprendizService){}
@@ -24,6 +25,18 @@ export class ListAllAprendizComponent {
         
         this.Aprendiz = data;
         console.log(this.Aprendiz);
+      }
+    )
+  }
+
+  borrar(document: number) {
+    this.serviceaprendiz.deleteAprendiz(document).subscribe(
+      data =>{
+        console.log(data);
+        
+        this.Aprendiz = data;
+        console.log(this.Aprendiz);
+        window.location.reload()
       }
     )
   }

@@ -19,7 +19,7 @@ const appRoutes: Routes = [
   {path:'',component:HomeMainComponent},
   {path:'signin',component:SignInComponent},
   {path:'registeraprendiz',component:RegisterAprendizComponent },
-  {path:'updateaprendiz',component:UpdateAprendizComponent },
+  {path:'updateaprendiz/:document',component:UpdateAprendizComponent },
   {path:'listalllaprendiz',component:ListAllAprendizComponent },
   {path:'constructor',component:ConstructionComponent },
 ]
