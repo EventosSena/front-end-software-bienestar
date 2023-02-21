@@ -6,6 +6,8 @@
 			<th scope="col" sortable="area" >document</th>
 			<th scope="col" sortable="population" >correo</th>
             <th scope="col" sortable="population" >curso</th>
+			<th scope="col" sortable="population" >Editar</th>
+			<th scope="col" sortable="population" >Eliminar</th>
 		</tr>
 	</thead>
 	<tbody *ngIf="  Aprendiz.length != 0">
@@ -15,6 +17,8 @@
 			<td>{{Aprendices.full_name}}</td>
             <td>{{Aprendices.email}}</td>
             <td>{{Aprendices.course}}</td>
+			<td><button routerLink="/updateaprendiz/{{Aprendices.document}}">Editar</button></td>
+			<td><button (click)="borrar(Aprendices.document)">Eliminar</button></td>
 		</tr>
 	</tbody>
 </table>

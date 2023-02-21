@@ -22,11 +22,23 @@ export class AprendizService {
     return this.httpcient.get<Aprendiz>("http://localhost:8080/aprendiz/consultall")
   }
 
-  updateAprendiz(aprendiz: Aprendiz): Observable<Aprendiz>{
+  getAprendiz(document : Number):  Observable<Aprendiz>{
+
+    return  this.httpcient.get<Aprendiz>(`http://localhost:8080/aprendiz/consult/${document}`)
+  }
+
+  updateAprendiz(doucment:number,aprendiz: Aprendiz): Observable<Aprendiz>{
 
     console.log(aprendiz);  
-    return this.httpcient.put<Aprendiz>(`http://localhost:8080/barber/update/${aprendiz.document}`,aprendiz);  
+    return this.httpcient.put<Aprendiz>(`http://localhost:8080/aprendiz/update/${aprendiz.document}`,aprendiz);  
   }
+
+  deleteAprendiz(document : Number):  Observable<any>{
+
+    return  this.httpcient.delete<any>(`http://localhost:8080/aprendiz/delete/${document}`)
+  }
+
+
 
 
 
