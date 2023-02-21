@@ -12,6 +12,11 @@ export class ListAllAprendizComponent {
 
   constructor(private serviceaprendiz:AprendizService){}
 
+  ngOnInit(): void {
+  
+    this.loaderAprendiz();
+
+  }
   loaderAprendiz():void{
     this.serviceaprendiz.listAprendiz().subscribe(
       data =>{
