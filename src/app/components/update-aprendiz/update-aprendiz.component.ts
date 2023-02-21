@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Aprendiz } from 'src/app/models/Aprendiz';
+import { AprendizService } from 'src/app/services/aprendiz/aprendiz.service';
 
 @Component({
   selector: 'app-update-aprendiz',
@@ -6,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./update-aprendiz.component.css']
 })
 export class UpdateAprendizComponent {
+
+  constructor(private serviceAprendiz:AprendizService){}
+
+  ngOnInit(): void {
+
+  }
+
+  updateAprendiz(){
+
+  }
+
 
 }

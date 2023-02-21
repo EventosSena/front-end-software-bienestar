@@ -8,12 +8,12 @@ import { User } from 'src/app/models/User';
 })
 export class UserService {
 
-  private userurl="http://localhost:8080/user/register";
+
 
   constructor(private httpcient:HttpClient ) {}
 
-  loguinuser(user:User):Observable<object>{
+  loguinuser(user:User):Observable<User>{
     console.log(user);
-    return this.httpcient.post(`${this.userurl}`,user);
+    return this.httpcient.post<User>('http://localhost:8080/user/register',user);
   }
 }
