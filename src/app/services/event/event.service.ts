@@ -25,13 +25,13 @@ export class EventService {
     return  this.httpcient.get<Event>(`http://localhost:8080/event/consult/${id}`)
   }
 
-  updateAprendiz(id:number,event: Event): Observable<Event>{
+  updateEvent(id:number,event: Event): Observable<Event>{
 
     console.log(event);  
     return this.httpcient.put<Event>(`http://localhost:8080/event/update/${event.id}`,event);  
   }
 
-  deleteAprendiz(id : Number):  Observable<any>{
+  deleteEvent(id : Number):  Observable<any>{
 
     return  this.httpcient.delete<any>(`http://localhost:8080/event/delete/${id}`)
   }
