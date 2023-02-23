@@ -16,6 +16,9 @@ import { ConstructionComponent } from './components/construction/construction.co
 import { ListAllResponsibleComponent } from './components/list-all-responsible/list-all-responsible.component';
 import { RegisterResponsibleComponent } from './components/register-responsible/register-responsible.component';
 import { UpdateResponsibleComponent } from './components/update-responsible/update-responsible.component';
+import { ListAllEventComponent } from './components/list-all-event/list-all-event.component';
+import { ResgisterEventComponent } from './components/resgister-event/resgister-event.component';
+import { UpdateEventComponent } from './components/update-event/update-event.component';
 
 
 const appRoutes: Routes = [
@@ -41,7 +44,10 @@ const appRoutes: Routes = [
     ConstructionComponent,
     ListAllResponsibleComponent,
     RegisterResponsibleComponent,
-    UpdateResponsibleComponent
+    UpdateResponsibleComponent,
+    ListAllEventComponent,
+    ResgisterEventComponent,
+    UpdateEventComponent
   ],
   imports: [
     BrowserModule,
