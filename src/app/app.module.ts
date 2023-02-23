@@ -33,7 +33,7 @@ const appRoutes: Routes = [
   {path:'updateresponsible/:document',component:UpdateResponsibleComponent},
   {path:'registerevent',component:ResgisterEventComponent },
   {path:'listallevent',component:ListAllEventComponent},
-  {path:'updateevent',component:UpdateEventComponent},
+  {path:'updateevent/:id',component:UpdateEventComponent},
 ]
 @NgModule({
   declarations: [
