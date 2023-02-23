@@ -24,13 +24,16 @@ import { UpdateEventComponent } from './components/update-event/update-event.com
 const appRoutes: Routes = [
   {path:'',component:HomeMainComponent},
   {path:'signin',component:SignInComponent},
-  {path:'registeraprendiz',component:RegisterAprendizComponent },
-  {path:'updateaprendiz/:document',component:UpdateAprendizComponent },
-  {path:'listalllaprendiz',component:ListAllAprendizComponent },
-  {path:'constructor',component:ConstructionComponent },
+  {path:'registeraprendiz',component:RegisterAprendizComponent},
+  {path:'updateaprendiz/:document',component:UpdateAprendizComponent},
+  {path:'listalllaprendiz',component:ListAllAprendizComponent},
+  {path:'constructor',component:ConstructionComponent},
   {path:'registerresponsible',component:RegisterResponsibleComponent},
-  {path:'listallresponsible',component:ListAllResponsibleComponent },
-  {path:'updateresponsible/:document',component:UpdateResponsibleComponent },
+  {path:'listallresponsible',component:ListAllResponsibleComponent},
+  {path:'updateresponsible/:document',component:UpdateResponsibleComponent},
+  {path:'registerevent',component:ResgisterEventComponent },
+  {path:'listallevent',component:ListAllEventComponent},
+  {path:'updateevent',component:UpdateEventComponent},
 ]
 @NgModule({
   declarations: [
