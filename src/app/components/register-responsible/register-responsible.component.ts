@@ -10,6 +10,7 @@ import { ResponsibleService } from 'src/app/services/responsible/responsible.ser
 })
 export class RegisterResponsibleComponent {
 
+  
   responsible:Responsible= new Responsible();
 
   constructor(private router: Router,private responsibleservice:ResponsibleService){}
