@@ -25,6 +25,9 @@ const appRoutes: Routes = [
   {path:'updateaprendiz/:document',component:UpdateAprendizComponent },
   {path:'listalllaprendiz',component:ListAllAprendizComponent },
   {path:'constructor',component:ConstructionComponent },
+  {path:'registerresponsible',component:RegisterResponsibleComponent},
+  {path:'listallresponsible',component:ListAllResponsibleComponent },
+  {path:'updateresponsible/:document',component:UpdateResponsibleComponent },
 ]
 @NgModule({
   declarations: [
