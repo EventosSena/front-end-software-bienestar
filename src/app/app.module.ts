@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeMainComponent } from './components/home-main/home-main.component';
@@ -19,21 +20,22 @@ import { UpdateResponsibleComponent } from './components/update-responsible/upda
 import { ListAllEventComponent } from './components/list-all-event/list-all-event.component';
 import { ResgisterEventComponent } from './components/resgister-event/resgister-event.component';
 import { UpdateEventComponent } from './components/update-event/update-event.component';
+import { SecurityGuard } from './components/security/security.guard';
 
 
 const appRoutes: Routes = [
   {path:'',component:HomeMainComponent},
   {path:'signin',component:SignInComponent},
-  {path:'registeraprendiz',component:RegisterAprendizComponent},
-  {path:'updateaprendiz/:document',component:UpdateAprendizComponent},
-  {path:'listalllaprendiz',component:ListAllAprendizComponent},
-  {path:'constructor',component:ConstructionComponent},
-  {path:'registerresponsible',component:RegisterResponsibleComponent},
-  {path:'listallresponsible',component:ListAllResponsibleComponent},
-  {path:'updateresponsible/:document',component:UpdateResponsibleComponent},
-  {path:'registerevent',component:ResgisterEventComponent },
-  {path:'listallevent',component:ListAllEventComponent},
-  {path:'updateevent/:id',component:UpdateEventComponent},
+  {path:'registeraprendiz',component:RegisterAprendizComponent,canActivate:[SecurityGuard]},
+  {path:'updateaprendiz/:document',component:UpdateAprendizComponent,canActivate:[SecurityGuard]},
+  {path:'listalllaprendiz',component:ListAllAprendizComponent,canActivate:[SecurityGuard]},
+  {path:'constructor',component:ConstructionComponent,canActivate:[SecurityGuard]},
+  {path:'registerresponsible',component:RegisterResponsibleComponent,canActivate:[SecurityGuard]},
+  {path:'listallresponsible',component:ListAllResponsibleComponent,canActivate:[SecurityGuard]},
+  {path:'updateresponsible/:document',component:UpdateResponsibleComponent,canActivate:[SecurityGuard]},
+  {path:'registerevent',component:ResgisterEventComponent,canActivate:[SecurityGuard] },
+  {path:'listallevent',component:ListAllEventComponent,canActivate:[SecurityGuard]},
+  {path:'updateevent/:id',component:UpdateEventComponent,canActivate:[SecurityGuard]},
 ]
 @NgModule({
   declarations: [
