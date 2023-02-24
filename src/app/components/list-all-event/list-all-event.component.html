@@ -1,0 +1,24 @@
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">id</th>
+			<th scope="col" sortable="name" >nombre</th>
+			<th scope="col" sortable="area" >descripsion</th>
+			<th scope="col" sortable="population" >lugar</th>
+            <th scope="col" sortable="population" >fecha</th>
+			<th scope="col" sortable="population" >Editar</th>
+			<th scope="col" sortable="population" >Eliminar</th>
+		</tr>
+	</thead>
+	<tbody *ngIf="  Event.length != 0">
+		<tr *ngFor="let events of Event">
+			<th scope="row"></th>
+			<td>{{events.name}}</td>
+			<td>{{events.description}}</td>
+            <td>{{events.place}}</td>
+            <td>{{events.date}}</td>
+			<td><button routerLink="/updateevent/{{events.id}}">Editar</button></td>
+			<td><button (click)="borrar(events.id)">Eliminar</button></td>
+		</tr>
+	</tbody>
+</table>

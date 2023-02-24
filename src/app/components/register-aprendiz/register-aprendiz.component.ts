@@ -15,9 +15,12 @@ export class RegisterAprendizComponent {
   constructor(private router: Router,private aprendizservice:AprendizService){}
 
   saveAprendiz() {
+    console.log('holi');
+    
     this.aprendizservice.saveAprendiz(this.aprendiz).subscribe(
       response  => {
-        console.log(response);
+
+        console.log(this.aprendiz);
         alert('Registro exitoso')
 
         setTimeout(() => {

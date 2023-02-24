@@ -1,20 +1,24 @@
 <table class="table table-striped">
 	<thead>
 		<tr>
-			<th scope="col">flata</th>
-			<th scope="col" sortable="name" >falta</th>
-			<th scope="col" sortable="area" >Area</th>
-			<th scope="col" sortable="population" >Population</th>
-            <th scope="col" sortable="population" >Population</th>
+			<th scope="col">id</th>
+			<th scope="col" sortable="name" >nombre</th>
+			<th scope="col" sortable="area" >document</th>
+			<th scope="col" sortable="population" >correo</th>
+            <th scope="col" sortable="population" >curso</th>
+			<th scope="col" sortable="population" >Editar</th>
+			<th scope="col" sortable="population" >Eliminar</th>
 		</tr>
 	</thead>
-	<tbody>
-		<tr >
+	<tbody *ngIf="  Aprendiz.length != 0">
+		<tr *ngFor="let Aprendices of Aprendiz">
 			<th scope="row"></th>
-			<td>falta</td>
-			<td>falta</td>
-            <td>falta</td>
-            <td>falta</td>
+			<td>{{Aprendices.document}}</td>
+			<td>{{Aprendices.full_name}}</td>
+            <td>{{Aprendices.email}}</td>
+            <td>{{Aprendices.course}}</td>
+			<td><button routerLink="/updateaprendiz/{{Aprendices.document}}">Editar</button></td>
+			<td><button (click)="borrar(Aprendices.document)">Eliminar</button></td>
 		</tr>
 	</tbody>
 </table>

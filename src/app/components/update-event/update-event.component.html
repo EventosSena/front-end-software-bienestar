@@ -1,0 +1,12 @@
+<div class="login-container" *ngIf="event">
+    <div class="login-info-container">
+      <h1 class="title">Actualizar Evento</h1>
+      <form class="inputs-container" (ngSubmit)="updateEvent()">
+          <input class="input" type="text" placeholder="Nombre del Evento" [(ngModel)] = "event.name" id="name" name="name" >
+          <input class="input" type="text" placeholder="Descripcion" [(ngModel)]= "event.description" id="description" name="description">
+          <input class="input" type="text" placeholder="lugar" [(ngModel)]="event.place" id="place" name="place">
+          <input class="input" type="datetime-local" placeholder="fecha del evento" [(ngModel)]="event.date" id="date " name="date">
+          <button class="btn" type="submit">Actualiza</button>
+      </form>
+    </div>
+</div>
