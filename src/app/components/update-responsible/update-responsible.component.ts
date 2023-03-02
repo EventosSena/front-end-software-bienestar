@@ -15,8 +15,8 @@ export class UpdateResponsibleComponent {
 
   ngOnInit(): void {
 
-    const document =this.acrivaterouter.snapshot.params['document'];
-    this.serviceAprendiz.getResponsible(document).subscribe({
+    const id =this.acrivaterouter.snapshot.params['id'];
+    this.serviceAprendiz.getResponsible(id).subscribe({
       next: data=>{
         this.responsible=data;
       },
@@ -24,19 +24,25 @@ export class UpdateResponsibleComponent {
         alert("usted no esta registrado en la base de datos")
       }
     })
+
   }
 
   
   updateresponsible():void{
-    const document = this.acrivaterouter.snapshot.params['document'];
-    this.serviceAprendiz.updateResponsible(document, this.responsible).subscribe({
-      next: data=>{
-        this.responsible=data;
-      },
-      error: err=>{
-        alert("usted no esta registrado en la base de datos")
+    const id = this.acrivaterouter.snapshot.params['id'];
+    this.serviceAprendiz.updateResponsible(id, this.responsible).subscribe(
+      response  => {
+
+        console.log(this.responsible);
+        alert('Registro exitoso')
+
+        setTimeout(() => {
+
+          this.router.navigate(["/listallresponsible"])
+          
+        }, 1000);
       }
-    })
+    );
 
   }
 
