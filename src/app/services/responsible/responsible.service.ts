@@ -23,21 +23,21 @@ export class ResponsibleService {
   }
   
 
-  getResponsible(document : Number):  Observable<Responsible>{
+  getResponsible(id : Number):  Observable<Responsible>{
 
-    return  this.httpcient.get<Responsible>(`http://localhost:8080/responsible/consult/${document}`)
+    return  this.httpcient.get<Responsible>(`http://localhost:8080/responsible/consult/${id}`)
   }
 
   
-  updateResponsible(doucment:number,responsible: Responsible): Observable<Responsible>{
+  updateResponsible(id:number,responsible: Responsible): Observable<Responsible>{
 
     console.log(responsible);  
-    return this.httpcient.put<Responsible>(`http://localhost:8080/responsible/update/${responsible.document}`,responsible);  
+    return this.httpcient.put<Responsible>(`http://localhost:8080/responsible/update/${responsible.id}`,responsible);  
   }
 
-  deleteResponsible(document : Number):  Observable<any>{
+  deleteResponsible(id: Number):  Observable<any>{
 
-    return  this.httpcient.delete<any>(`http://localhost:8080/responsible/delete/${document}`)
+    return  this.httpcient.delete<any>(`http://localhost:8080/responsible/delete/${id}`)
   }
 
 }

@@ -17,8 +17,8 @@
 			<td>{{Aprendices.full_name}}</td>
             <td>{{Aprendices.email}}</td>
             <td>{{Aprendices.course}}</td>
-			<td><button routerLink="/updateaprendiz/{{Aprendices.document}}">Editar</button></td>
-			<td><button (click)="borrar(Aprendices.document)">Eliminar</button></td>
+			<td><button routerLink="/updateaprendiz/{{Aprendices.id}}">Editar</button></td>
+			<td><button (click)="borrar(Aprendices.id)">Eliminar</button></td>
 		</tr>
 	</tbody>
 </table>

@@ -16,8 +16,8 @@ export class UpdateAprendizComponent {
 
   ngOnInit(): void {
 
-    const document =this.acrivaterouter.snapshot.params['document'];
-    this.serviceAprendiz.getAprendiz(document).subscribe({
+    const id =this.acrivaterouter.snapshot.params['id'];
+    this.serviceAprendiz.getAprendiz(id).subscribe({
       next: data=>{
         this.aprendiz=data;
       },
@@ -29,16 +29,20 @@ export class UpdateAprendizComponent {
   }
 
   updateAprendiz():void{
-    const document = this.acrivaterouter.snapshot.params['document'];
-    this.serviceAprendiz.updateAprendiz(document, this.aprendiz).subscribe({
-      next: data=>{
-        this.aprendiz=data;
-      },
-      error: err=>{
-        alert("usted no esta registrado en la base de datos")
-      }
-    })
+    const id = this.acrivaterouter.snapshot.params['id'];
+    this.serviceAprendiz.updateAprendiz(id, this.aprendiz).subscribe(
+      response  => {
 
+        console.log(this.aprendiz);
+        alert('Registro exitoso')
+
+        setTimeout(() => {
+
+          this.router.navigate(["/listalllaprendiz"])
+          
+        }, 1000);
+      }
+    );
   }
 
 

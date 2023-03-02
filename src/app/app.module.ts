@@ -26,16 +26,16 @@ import { SecurityGuard } from './components/security/security.guard';
 const appRoutes: Routes = [
   {path:'',component:HomeMainComponent},
   {path:'signin',component:SignInComponent},
-  {path:'registeraprendiz',component:RegisterAprendizComponent,canActivate:[SecurityGuard]},
-  {path:'updateaprendiz/:document',component:UpdateAprendizComponent,canActivate:[SecurityGuard]},
-  {path:'listalllaprendiz',component:ListAllAprendizComponent,canActivate:[SecurityGuard]},
-  {path:'constructor',component:ConstructionComponent,canActivate:[SecurityGuard]},
-  {path:'registerresponsible',component:RegisterResponsibleComponent,canActivate:[SecurityGuard]},
-  {path:'listallresponsible',component:ListAllResponsibleComponent,canActivate:[SecurityGuard]},
-  {path:'updateresponsible/:document',component:UpdateResponsibleComponent,canActivate:[SecurityGuard]},
-  {path:'registerevent',component:ResgisterEventComponent,canActivate:[SecurityGuard] },
-  {path:'listallevent',component:ListAllEventComponent,canActivate:[SecurityGuard]},
-  {path:'updateevent/:id',component:UpdateEventComponent,canActivate:[SecurityGuard]},
+  {path:'registeraprendiz',component:RegisterAprendizComponent},
+  {path:'updateaprendiz/:id',component:UpdateAprendizComponent},
+  {path:'listalllaprendiz',component:ListAllAprendizComponent},
+  {path:'constructor',component:ConstructionComponent},
+  {path:'registerresponsible',component:RegisterResponsibleComponent},
+  {path:'listallresponsible',component:ListAllResponsibleComponent},
+  {path:'updateresponsible/:id',component:UpdateResponsibleComponent},
+  {path:'registerevent',component:ResgisterEventComponent},
+  {path:'listallevent',component:ListAllEventComponent},
+  {path:'updateevent/:id',component:UpdateEventComponent},
 ]
 @NgModule({
   declarations: [

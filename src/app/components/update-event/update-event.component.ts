@@ -29,14 +29,19 @@ export class UpdateEventComponent {
 
   updateEvent():void{
     const id = this.acrivaterouter.snapshot.params['id'];
-    this.serviceevent.updateEvent(id, this.event).subscribe({
-      next: data=>{
-        this.event=data;
-      },
-      error: err=>{
-        alert("usted no esta registrado en la base de datos")
+    this.serviceevent.updateEvent(id, this.event).subscribe(
+      response  => {
+
+        console.log(this.event);
+        alert('Registro exitoso')
+
+        setTimeout(() => {
+
+          this.router.navigate(["/listalllaprendiz"])
+          
+        }, 1000);
       }
-    })
+    );
 
   }
 

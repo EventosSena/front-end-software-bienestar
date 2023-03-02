@@ -17,8 +17,8 @@
 			<td>{{responsibles.full_name}}</td>
             <td>{{responsibles.email}}</td>
             <td>{{responsibles.associated}}</td>
-			<td><button routerLink="/updateresponsible/{{responsibles.document}}">Editar</button></td>
-			<td><button (click)="borrar(responsibles.document)">Eliminar</button></td>
+			<td><button routerLink="/updateresponsible/{{responsibles.id}}">Editar</button></td>
+			<td><button (click)="borrar(responsibles.id)">Eliminar</button></td>
 		</tr>
 	</tbody>
 </table>
