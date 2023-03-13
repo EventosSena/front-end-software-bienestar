@@ -39,6 +39,13 @@ export class AprendizService {
     return  this.httpcient.delete<any>(`http://localhost:8080/aprendiz/delete/${id}`)
   }
 
+  
+  
+  getAprendizAttendance(idA : Number, idE: Number):  Observable<Aprendiz>{
+
+    return  this.httpcient.get<Aprendiz>(`http://localhost:8080/aprendiz/consultAttendance?id=${idA}&id=${idE}`)
+  }
+
 
 
 

@@ -1,17 +1,18 @@
+
 <div class="container">
   
-    <div class="content">
-        <h2 class="title">Asiste a tu evento</h2>
-        
-        <label >Documento</label>
-        <input type="number" placeholder="ingrese el documento" >
-        <label>Codigo Del Evento</label>
-        <input type="number" placeholder="ingrese el codigo del evento">
 
-        <div class="btn-home">
-            <a href="#" class="btn">Asistir</a>
-        </div>
-    </div>
+    <form (ngSubmit)="saveAttendance()">
+        <h2 class="title">Asiste a tu evento</h2>
+    
+        <label >Documento</label>
+        <input type="number" placeholder="ingrese el documento"  [(ngModel)] = "idAprendiz" name="idAprendiz">
+        <label>Codigo Del Evento</label>
+        <input type="number" placeholder="ingrese el codigo del evento" [(ngModel)] = "idEvent" name="idEvent">
+        <button type="submit" >asistir</button>
+
+    </form>
+
 
 </div>
    
