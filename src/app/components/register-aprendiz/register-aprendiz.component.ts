@@ -21,6 +21,7 @@ export class RegisterAprendizComponent {
       response  => {
 
         console.log(this.aprendiz);
+      
 
         setTimeout(() => {
 
