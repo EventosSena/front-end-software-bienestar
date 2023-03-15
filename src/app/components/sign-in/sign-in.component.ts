@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { User } from 'src/app/models/User';
-import { UserService } from 'src/app/services/user/user.service';
 
 
 
@@ -13,18 +12,7 @@ export class SignInComponent {
    
   user:User= new User();
 
- constructor(private servicio:UserService){}
+ constructor(){}
 
-  userloguin(){
-    console.log(this.user)
-    this.servicio.loguinuser(this.user).subscribe({
-      next: data=>{
-        alert("felicidades acabas de loguearte")
-      },
-      error: err=>{
-        alert("usted no esta registrado en la base de datos")
-      }
-    })
-  }
 }
 
