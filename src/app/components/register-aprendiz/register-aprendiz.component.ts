@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import { Component } from '@angular/core';
 import { AprendizService } from 'src/app/services/aprendiz/aprendiz.service';
 import { Router } from '@angular/router';
@@ -19,15 +20,13 @@ export class RegisterAprendizComponent {
     
     this.aprendizservice.saveAprendiz(this.aprendiz).subscribe(
       response  => {
-
         console.log(this.aprendiz);
-      
-
         setTimeout(() => {
-
-          this.router.navigate(["/"])
           
+          this.router.navigate(["/"])
+         
         }, 1000);
+        Swal.fire('Registro exitoso')
       }
     );
   }
