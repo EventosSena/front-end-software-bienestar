@@ -23,10 +23,10 @@ export class RegisterAprendizComponent {
         console.log(this.aprendiz);
         setTimeout(() => {
           
-          this.router.navigate(["/"])
+          this.router.navigate(["/listalllaprendiz"])
          
         }, 1000);
-        Swal.fire('Registro exitoso')
+        Swal.fire('Registro del aprendiz '+this.aprendiz.full_name+' fue exitoso')
       }
     );
   }

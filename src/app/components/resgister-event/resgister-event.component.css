@@ -1,121 +1,83 @@
-.login-container {
-    height: 43.75em;
-    width: 60em;
-    margin: 6em 23rem;
-    border-radius: 10px;
+.body{
+
+    height: 78vh;
     display: flex;
     justify-content: center;
-}
-
-.login-info-container {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    text-align: center;
-    padding-top: 3.5rem;
-    background-color: #f8f3ff;
 }
 
-.image-container {
-    padding: 2rem;
-    width: 50%;
-    background-color: #eadbff;
-    box-sizing: border-box;
+.form {
+display: flex;
+flex-direction: column;
+gap: 10px;
+width: 403px;
+background-color: #fff;
+border-radius: 20px;
+padding: 30px 20px;
+box-shadow: 100px 100px 80px rgba(0, 0, 0, 0.03)
 }
 
 .title {
-    text-transform: capitalize;
-    font-size: 2.25rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: #9089cc;
+color: black;
+font-weight: bold;
+text-align: center;
+font-size: 1.5rem;
+margin-bottom: 4px;
 }
 
-.social-login {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    cursor: pointer;
+.sub {
+text-align: center;
+color: black;
+font-size: 16px;
+width: 100%;
 }
 
-.social-login-element {
-    width: 12.5rem;
-    height: 3.75rem;
-    font-size: 1.2rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    border-radius: 5px;
-    border: 1px solid #674baf;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.sub.mb {
+margin-bottom: 1px;
 }
 
-.social-login-element img {
-    width: 1.875rem;
-    height: 1.875rem;
-    position: relative;
-    top: 0;
-    left: -0.625rem;
+.sub a {
+color: rgb(23, 111, 211);
 }
 
-.social-login-element:hover {
-    background-color: #fff;
+.avatar {
+height: 50px;
+width: 50px;
+background-color: rgb(23, 111, 211);
+border-radius: 50%;
+align-self: center;
+padding: 6px;
+cursor: pointer;
+box-shadow: 12.5px 12.5px 10px rgba(0, 0, 0, 0.015),100px 100px 80px rgba(0, 0, 0, 0.03);
 }
 
-.login-info-container > p {
-    font-size: 1.25em;
-    margin-top: 1.5em;
+.form button {
+align-self: flex-end;
 }
 
-.inputs-container {
-    height: 82%;
-    width: 85%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 36px;
+.input, button {
+border: none;
+outline: none;
+width: 100%;
+padding: 16px 10px;
+background-color: rgb(247, 243, 243);
+font-size: 16px;
+border-radius: 10px;
+box-shadow: 12.5px 12.5px 10px rgba(0, 0, 0, 0.015),100px 100px 80px rgba(0, 0, 0, 0.03);
 }
 
-
-.input, .btn {
-    width: 90%;
-    height: 3.125rem;
-    font-size: 1em;
+button {
+margin-top: 12px;
+background-color: rgb(23, 111, 211);
+color: #fff;
+text-transform: uppercase;
+font-weight: bold;
 }
 
-.input {
-    padding-left: 20px;
-    border: none;
-    border-radius: 5px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    box-sizing: border-box;
+.input:focus {
+border: 1px solid rgb(23, 111, 211);
 }
 
-.input:hover {
-    border: 2px solid #674baf;
-}
-
-.btn {
-    width: 80%;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    background-color:#674baf;
-    cursor: pointer;
-}
-
-.inputs-container p {
-    margin: 0;
-}
-
-.span {
-    color: #e882e8;
-    font-weight: 600;
-    cursor: pointer;
+#file {
+display: none;
 }

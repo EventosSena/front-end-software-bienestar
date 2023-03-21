@@ -1,24 +1,24 @@
-<table class="table table-striped">
-	<thead>
-		<tr>
-			<th scope="col">id</th>
-			<th scope="col" sortable="name" >nombre</th>
-			<th scope="col" sortable="area" >document</th>
-			<th scope="col" sortable="population" >correo</th>
-            <th scope="col" sortable="population" >curso asosiado</th>
-			<th scope="col" sortable="population" >Editar</th>
-			<th scope="col" sortable="population" >Eliminar</th>
-		</tr>
-	</thead>
-	<tbody *ngIf="  responsible.length != 0">
-		<tr *ngFor="let responsibles of responsible">
-			<th scope="row"></th>
-			<td>{{responsibles.document}}</td>
-			<td>{{responsibles.full_name}}</td>
-            <td>{{responsibles.email}}</td>
-            <td>{{responsibles.associated}}</td>
-			<td><button routerLink="/updateresponsible/{{responsibles.id}}">Editar</button></td>
-			<td><button (click)="borrar(responsibles.id)">Eliminar</button></td>
-		</tr>
-	</tbody>
-</table>
+<div class="position-table">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th scope="col" sortable="name" >Document</th>
+				<th scope="col" sortable="area" >Nombre</th>
+				<th scope="col" sortable="population" >Correo</th>
+				<th scope="col" sortable="population" >Curso Asosiado</th>
+				<th scope="col" sortable="population" >Editar</th>
+				<th scope="col" sortable="population" >Eliminar</th>
+			</tr>
+		</thead>
+		<tbody *ngIf="  responsible.length != 0">
+			<tr *ngFor="let responsibles of responsible">
+				<td>{{responsibles.document}}</td>
+				<td>{{responsibles.full_name}}</td>
+				<td>{{responsibles.email}}</td>
+				<td>{{responsibles.associated}}</td>
+				<td><button routerLink="/updateresponsible/{{responsible.id}}" class="button_one">Editar<span></span></button></td>
+				<td><button (click)="borrar(responsible.id)" class="button_tow">Eliminar<span></span></button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

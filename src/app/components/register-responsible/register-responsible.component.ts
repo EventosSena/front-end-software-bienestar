@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Responsible } from 'src/app/models/Responsible';
@@ -22,13 +23,12 @@ export class RegisterResponsibleComponent {
       response  => {
 
         console.log(this.responsible);
-        alert('Registro exitoso')
-
         setTimeout(() => {
 
-          this.router.navigate(["/"])
+          this.router.navigate(["/listallresponsible"])
           
         }, 1000);
+        Swal.fire('Registro del responsable '+this.responsible.full_name+' fue exitoso')
       }
     );
   }
