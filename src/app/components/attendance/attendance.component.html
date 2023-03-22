@@ -1,0 +1,27 @@
+
+<div class="position-table">
+	<h1>tabla aprendices</h1>
+	<table class="table table-striped" >
+		<thead>
+			<tr>
+				<th scope="col" sortable="name" >Documento</th>
+				<th scope="col" sortable="area" >Nombre</th>
+				<th scope="col" sortable="population" >Correo</th>
+				<th scope="col" sortable="population" >Curso</th>
+				<th scope="col" sortable="population" >Editar</th>
+				<th scope="col" sortable="population" >Eliminar</th>
+			</tr>
+		</thead>
+		<tbody *ngIf="  Attendance.length != 0">
+			<tr *ngFor="let Aprendices of Attendance">
+				<td>{{Aprendices.id}}</td>
+				<td>{{Aprendices.id}}</td>
+				<td>{{Aprendices.email}}</td>
+				<td>{{Aprendices.course}}</td>
+
+			</tr>
+		</tbody>
+	</table>
+   
+
+</div>

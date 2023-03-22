@@ -9,7 +9,7 @@ import { Aprendiz } from 'src/app/models/Aprendiz';
   styleUrls: ['./register-aprendiz.component.css']
 })
 export class RegisterAprendizComponent {
-
+  f=false
   
   aprendiz:Aprendiz= new Aprendiz();
 

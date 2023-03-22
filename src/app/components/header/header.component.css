@@ -141,10 +141,11 @@ gap: 500px;
 /*header barberia*/
 
 .images img{
-border-radius: 50%;
-height: 108px;
-width: 60%;
+    border-radius: 50%;
+    height: 108px;
+    width: 87%;
 }
+
 .container_two{
 background-color: #1d1d1dd8;
 height: 114px;

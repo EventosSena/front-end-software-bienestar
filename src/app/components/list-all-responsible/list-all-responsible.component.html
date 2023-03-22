@@ -1,4 +1,7 @@
 <div class="position-table">
+	<div class="title">
+		<h1>Lista Responsables</h1>
+	</div>
 	<table class="table table-striped">
 		<thead>
 			<tr>
@@ -21,4 +24,7 @@
 			</tr>
 		</tbody>
 	</table>
+	<div class="algo" *ngIf="responsible && responsible.length == 0" #alertavacio>
+		<p>no hay ningun Responsable registrado</p>
+	</div>
 </div>

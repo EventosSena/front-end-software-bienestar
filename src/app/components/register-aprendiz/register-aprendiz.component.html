@@ -3,9 +3,9 @@
     <span class="title">Registrar Aprendiz</span>
     <span class="sub mb">Registra el aprendiz llenando los siguientes campos</span>
    <input id="file" type="file">
-   <input class="input" type="text" placeholder="Nombre Completo" [(ngModel)] = "aprendiz.full_name" id="name" name="name" >
-   <input class="input" type="number"  placeholder="Documento " [(ngModel)]= "aprendiz.document" id="document" name="document">
-   <input class="input" type="text" placeholder="Correo" [(ngModel)]="aprendiz.email" id="email" name="email">
+   <input class="input" type="text" placeholder="Nombre Completo" [(ngModel)] = "aprendiz.full_name" id="name" name="name" required >
+   <input class="input" type="number"  placeholder="Documento " [(ngModel)]= "aprendiz.document" id="document" name="document" minlength="10">
+   <input class="input" type="text" placeholder="Correo" [(ngModel)]="aprendiz.email" id="email" name="email" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}">
    <input class="input" type="text" placeholder="Programa de formación" [(ngModel)]="aprendiz.course" id=" course" name=" course">
       <button type="submit">Registrar</button>
   </form>

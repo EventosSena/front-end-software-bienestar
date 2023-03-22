@@ -1,28 +1,41 @@
 
-<div class="position-table">
-	<table class="table table-striped">
-		<thead>
-			<tr>
-				<th scope="col" sortable="name" >Documento</th>
-				<th scope="col" sortable="area" >Nombre</th>
-				<th scope="col" sortable="population" >Correo</th>
-				<th scope="col" sortable="population" >Curso</th>
-				<th scope="col" sortable="population" >Editar</th>
-				<th scope="col" sortable="population" >Eliminar</th>
-			</tr>
-		</thead>
-		<tbody *ngIf="  Aprendiz.length != 0">
-			<tr *ngFor="let Aprendices of Aprendiz">
-				<td>{{Aprendices.document}}</td>
-				<td>{{Aprendices.full_name}}</td>
-				<td>{{Aprendices.email}}</td>
-				<td>{{Aprendices.course}}</td>
-				<td><button routerLink="/updateaprendiz/{{Aprendices.id}}" class="button_one">Editar<span></span></button></td>
-				<td><button (click)="borrar(Aprendices.id)" class="button_tow">Eliminar<span></span></button></td>
-			</tr>
-		</tbody>
-	</table>
+<div class="scroll">
+	<div class="position-table">
+		<div class="title">
+			<h1>Lista Aprendices</h1>
+		</div>
+	
+		<table class="table table-striped" >
+			<thead>
+				<tr>
+					<th scope="col" sortable="name" >Documento</th>
+					<th scope="col" sortable="area" >Nombre</th>
+					<th scope="col" sortable="population" >Correo</th>
+					<th scope="col" sortable="population" >Curso</th>
+					<th scope="col" sortable="population" >Editar</th>
+					<th scope="col" sortable="population" >Eliminar</th>
+				</tr>
+			</thead>
+			<tbody *ngIf="  Aprendiz.length != 0">
+				<tr *ngFor="let Aprendices of Aprendiz">
+					<td>{{Aprendices.document}}</td>
+					<td>{{Aprendices.full_name}}</td>
+					<td>{{Aprendices.email}}</td>
+					<td>{{Aprendices.course}}</td>
+					<td><button routerLink="/updateaprendiz/{{Aprendices.id}}" class="button_one">Editar<span></span></button></td>
+					<td><button (click)="borrar(Aprendices.id)" class="button_tow">Eliminar<span></span></button></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="algo" *ngIf="Aprendiz && Aprendiz.length == 0" #alertavacio>
+			<p>no hay ningun aprendiz registrado</p>
+		</div>
+	</div>
+	
+
 </div>
+
+
 	
 
 

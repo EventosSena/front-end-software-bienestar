@@ -21,6 +21,7 @@ import { ListAllEventComponent } from './components/list-all-event/list-all-even
 import { ResgisterEventComponent } from './components/resgister-event/resgister-event.component';
 import { UpdateEventComponent } from './components/update-event/update-event.component';
 import { SecurityGuard } from './components/security/security.guard';
+import { AttendanceComponent } from './components/attendance/attendance.component';
 
 
 const appRoutes: Routes = [
@@ -37,6 +38,7 @@ const appRoutes: Routes = [
   {path:'registerevent',component:ResgisterEventComponent},
   {path:'listallevent',component:ListAllEventComponent},
   {path:'updateevent/:id',component:UpdateEventComponent},
+  {path:'listallatte',component:UpdateEventComponent},
 ]
 @NgModule({
   declarations: [
@@ -53,7 +55,8 @@ const appRoutes: Routes = [
     UpdateResponsibleComponent,
     ListAllEventComponent,
     ResgisterEventComponent,
-    UpdateEventComponent
+    UpdateEventComponent,
+    AttendanceComponent
   ],
   imports: [
     BrowserModule,

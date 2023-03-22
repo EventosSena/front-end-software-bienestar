@@ -2,8 +2,10 @@ table{width: 90%; border: 1px solid #515151; border-collapse: collapse;}
 th, td { text-align: center; vertical-align: top; height: 2%;}
 th {border: 1px solid #515151; border-spacing: 0; text-transform: uppercase; color: #333;}
 td {border-left: 1px solid #515151;  height: 3rem;}
-.position-table{display: flex; justify-content: center; height: 79vh; flex-direction: column; align-items: center;}
-
+.position-table{ display: flex; justify-content: center; height: 79vh; flex-direction: column; align-items: center;}
+/* .scroll{
+    overflow: scroll;
+} */
 .button_one {
     border: none;
     /* display: block; */
@@ -112,4 +114,19 @@ color: white;
 
 .button_tow:active span::before {
 background: #2751cd;
+}
+
+.title{
+    height: 15vh;
+}
+
+
+.algo{
+    height: 30vh;
+    
+}
+.algo p{
+    text-align: center;
+    font-size: 25px;
+    margin: 50px 0;
 }

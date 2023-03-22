@@ -113,3 +113,18 @@ color: white;
 .button_tow:active span::before {
 background: #2751cd;
 }
+
+.title{
+    height: 15vh;
+}
+
+
+.algo{
+    height: 30vh;
+    
+}
+.algo p{
+    text-align: center;
+    font-size: 25px;
+    margin: 50px 0;
+}
