@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { Event } from 'src/app/models/Event';
 import { EventService } from 'src/app/services/event/event.service';
 
@@ -22,13 +23,13 @@ export class ResgisterEventComponent {
       response  => {
 
         console.log(this.event);
-        alert('Registro exitoso')
 
         setTimeout(() => {
 
-          this.router.navigate(["/"])
+          this.router.navigate(["/listallevent"])
           
         }, 1000);
+        Swal.fire('Registro del eventos '+this.event.name+' fue exitoso')
       }
     );
   }

@@ -25,6 +25,7 @@ import { SecurityGuard } from './components/security/security.guard';
 
 const appRoutes: Routes = [
   {path:'',component:HomeMainComponent},
+  {path:'header',component:HeaderComponent},
   {path:'signin',component:SignInComponent},
   {path:'registeraprendiz',component:RegisterAprendizComponent},
   {path:'updateaprendiz/:id',component:UpdateAprendizComponent},

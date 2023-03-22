@@ -1,12 +1,39 @@
-<div class="head">
+<div class="body">
+    <div  class="funciones">
 
-    <div class="logo">
-        <a [routerLink]="['/']" ><img src="../../../assets/images/LogoEventos2.PNG" alt=""></a>
-    </div>
+        <div class="container_two">
     
-    <div class="nav">
-        <a [routerLink]="['/signin']" >Iniciar sesion</a>
+          <div class="container_tree">
+            <div class="btn-menu">
+    
+              <label for="btn-menu">☰</label>
+    
+              </div>
+                <div class="logo">
+                  <h1>Eventos Sena  </h1>
+                </div>
+    
+              </div>
+            </div>
+            <div >
+    
+            <input type="checkbox" id="btn-menu">
+            <div class="container-menu">
+              <div class="cont-menu">
+                <nav>
+                 
+                  <nav class="funciones"  >
+                    <a [routerLink]="['/']" class="images"><img src="https://res.cloudinary.com/ditxfydru/image/upload/v1679085249/Eventos%20Sena/LogoEventos2_t0n8sg.png" alt=""></a>
+                    <a [routerLink]="['/registeraprendiz']">Registrar aprendiz</a>
+                    <a [routerLink]="['/listalllaprendiz']">Listar aprendiz</a>
+                    <a [routerLink]="['/registerresponsible']">Registar responsables</a>
+                    <a [routerLink]="['/listallresponsible']">Listar responsables</a>
+                    <a [routerLink]="['/registerevent']">Registrar eventos</a>
+                    <a [routerLink]="['/listallevent']">Listar eventos </a>
+                  </nav>
+                </nav>
+                <label for="btn-menu">⨉</label>
+            </div>    
+        </div>
     </div>
-  
 </div>
-
