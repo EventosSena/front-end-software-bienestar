@@ -38,7 +38,7 @@ const appRoutes: Routes = [
   {path:'registerevent',component:ResgisterEventComponent},
   {path:'listallevent',component:ListAllEventComponent},
   {path:'updateevent/:id',component:UpdateEventComponent},
-  {path:'listallatte',component:UpdateEventComponent},
+  {path:'listallattendance',component:AttendanceComponent},
 ]
 @NgModule({
   declarations: [
