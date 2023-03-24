@@ -1,3 +1,4 @@
+import { identifierName } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { AttendanceService } from 'src/app/services/attendance/attendance.service';
 
@@ -23,9 +24,10 @@ export class AttendanceComponent {
     this.serviceattendance.listAttendance().subscribe(
       data =>{
         console.log(data);
+        console.log(data);
         
         this.Attendance = data;
-        console.log(this.Attendance);
+        console.log(this.Attendance[1].aprendiz.document);
       }
     )
   }

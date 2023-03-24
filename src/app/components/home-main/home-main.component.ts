@@ -20,15 +20,16 @@ export class HomeMainComponent {
   // aprendiz:Aprendiz= new Aprendiz();
 
   // event: Event=new Event();
-
-  attendance:Attendance=new Attendance();
+  a:number=0;
+  b:number=0;
+  attendance:Attendance=new Attendance(this.a,this.b);
 
   constructor(private router: Router,private Attendanceservice:AttendanceService){}
 
   
   saveAttendance() {
 
-    this.Attendanceservice.saveAttendance(this.attendance).subscribe(
+    this.Attendanceservice.saveAttendance(this.a,this.b).subscribe(
       response  => {
         console.log(this.attendance);
         setTimeout(() => {
