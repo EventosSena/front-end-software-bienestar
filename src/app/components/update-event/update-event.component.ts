@@ -37,7 +37,7 @@ export class UpdateEventComponent {
 
         setTimeout(() => {
 
-          this.router.navigate(["/listalllaprendiz"])
+          this.router.navigate(["/listallevent"])
           
         }, 1000);
       }

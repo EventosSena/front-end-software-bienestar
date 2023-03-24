@@ -1,0 +1,40 @@
+
+
+<div class="title">
+	<h1>Lista Asistencia</h1>
+</div>
+
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+	
+
+	<table class="table table-bordered table-striped mb-0">
+	  <thead>
+		<tr>
+			<th scope="col"  >Aprendiz</th>
+			<th scope="col"  >Documento</th>
+			<th scope="col" >Evento</th>
+			<th scope="col" >codigo evento </th>
+
+		</tr>
+	  </thead>
+	  <tbody *ngIf="  Attendance.length != 0">
+		<tr *ngFor="let Aprendices of Attendance">
+			<td>{{Aprendices.aprendiz.full_name}}</td>
+			<td>{{Aprendices.aprendiz.document}}</td>
+			<td>{{Aprendices.event.name}}</td>
+			<td>{{ Aprendices.event.id}}</td>
+			<pre></pre>
+
+		</tr>
+	</tbody>
+	</table>
+	<div class="algo" *ngIf="Attendance && Attendance.length == 0" #alertavacio>
+		<p>no hay ninguna asistencia  registrada</p>
+	</div>
+</div>
+
+
+
+	
+
+

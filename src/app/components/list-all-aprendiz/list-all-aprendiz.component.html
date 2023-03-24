@@ -1,17 +1,22 @@
+<div class="title">
+	<h1>Lista Aprendices</h1>
+</div>
 
-<div class="position-table">
-	<table class="table table-striped">
-		<thead>
-			<tr>
-				<th scope="col" sortable="name" >Documento</th>
-				<th scope="col" sortable="area" >Nombre</th>
-				<th scope="col" sortable="population" >Correo</th>
-				<th scope="col" sortable="population" >Curso</th>
-				<th scope="col" sortable="population" >Editar</th>
-				<th scope="col" sortable="population" >Eliminar</th>
-			</tr>
-		</thead>
-		<tbody *ngIf="  Aprendiz.length != 0">
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+	
+
+	<table class="table table-bordered table-striped mb-0">
+	  <thead>
+		<tr>
+			<th scope="col"  >Documento</th>
+			<th scope="col" >Nombre</th>
+			<th scope="col">Correo</th>
+			<th scope="col" >Curso</th>
+			<th scope="col" >Editar</th>
+			<th scope="col"  >Eliminar</th>
+		</tr>
+	  </thead>
+	  	<tbody *ngIf="  Aprendiz.length != 0">
 			<tr *ngFor="let Aprendices of Aprendiz">
 				<td>{{Aprendices.document}}</td>
 				<td>{{Aprendices.full_name}}</td>
@@ -22,7 +27,13 @@
 			</tr>
 		</tbody>
 	</table>
+	<div class="algo" *ngIf="Aprendiz && Aprendiz.length == 0" #alertavacio>
+		<p>no hay ningun aprendiz registrado</p>
+	</div>
 </div>
+
+
+
 	
 
 
