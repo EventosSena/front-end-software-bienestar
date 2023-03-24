@@ -1,11 +1,11 @@
 export class Attendance {
-    idAprendiz:String;
-    idEvent:String;
+    idAprendiz:number;
+    idEvent:number;
   
 
     constructor(){
-        this.idAprendiz='';
-        this.idEvent='';
+        this.idAprendiz=0;
+        this.idEvent=0;
     }
 
 

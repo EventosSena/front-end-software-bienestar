@@ -14,10 +14,11 @@
 		</thead>
 		<tbody *ngIf="  Attendance.length != 0">
 			<tr *ngFor="let Aprendices of Attendance">
-				<td>{{Aprendices.id}}</td>
+				<td>{{Aprendices }}</td>
 				<td>{{Aprendices.id}}</td>
 				<td>{{Aprendices.email}}</td>
-				<td>{{Aprendices.course}}</td>
+				<td>{{ Aprendices | json }}</td>
+				<pre>{{ Aprendices | json }}</pre>
 
 			</tr>
 		</tbody>
