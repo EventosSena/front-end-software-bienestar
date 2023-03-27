@@ -34,7 +34,9 @@ const appRoutes: Routes = [
   {path:'constructor',component:ConstructionComponent},
   {path:'registerresponsible',component:RegisterResponsibleComponent},
   {path:'listallresponsible',component:ListAllResponsibleComponent},
+
   {path:'updateresponsible/:id',component:UpdateResponsibleComponent},
+
   {path:'registerevent',component:ResgisterEventComponent},
   {path:'listallevent',component:ListAllEventComponent},
   {path:'updateevent/:id',component:UpdateEventComponent},
