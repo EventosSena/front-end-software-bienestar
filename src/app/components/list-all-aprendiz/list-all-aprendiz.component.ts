@@ -30,34 +30,32 @@ export class ListAllAprendizComponent {
       }
     )
   }
-
   borrar(document: number) {
-    this.serviceaprendiz.deleteAprendiz(document).subscribe(
-      data =>{
-        console.log(data);
-        
-        this.Aprendiz = data;
-        console.log(this.Aprendiz);
-        window.location.reload()
+    Swal.fire({
+      title: 'Desea eliminar este registro? ',
+      showCancelButton: true,
+      confirmButtonText: 'Si',
 
-        // Swal.fire({
-        //   title: '¿desea eliminar este aprendiz?',
-        //   text: "este registro se eliminara para siempre",
-        //   icon: 'warning',
-        //   showCancelButton: true,
-        //   confirmButtonColor: '#3085d6',
-        //   cancelButtonColor: '#d33',
-        //   confirmButtonText: 'si'
-        // }).then((result) => {
-        //   if (result.isConfirmed) {
-       
-        //   }if(result.isDenied){
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.serviceaprendiz.deleteAprendiz(document).subscribe(
+          data =>{
+            console.log(data);
+            
+            this.Aprendiz = data;
+            console.log(this.Aprendiz);
+          }
+        )
+        Swal.fire('El registro se elimino con exito')
+        setTimeout(() => {
           
-        //   }
-        // })
-        // 
+          window.location.reload()
+         
+        },1000);
+ 
       }
-    )
+    })
+  
   }
 
 }

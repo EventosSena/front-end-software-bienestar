@@ -26,8 +26,9 @@ export class HomeMainComponent {
   
   saveAttendance() {
 
-    this.Attendanceservice.saveAttendance(this.a,this.b).subscribe(
-      response  => {
+    this.Attendanceservice.saveAttendance(this.a,this.b).subscribe({
+      next: (response) => {
+        console.log(response);
         console.log(this.attendance);
         setTimeout(() => {
           
@@ -35,8 +36,14 @@ export class HomeMainComponent {
          
         }, 1000);
         Swal.fire('Registro de la asistencia a sido exitoso')
+      },
+      error: (error) => {
+        console.log(error);
+        Swal.fire('algunos de los datos ingresados no exiten el la base de datos')
+          
       }
-    );
+    });
+  
   }
 
   

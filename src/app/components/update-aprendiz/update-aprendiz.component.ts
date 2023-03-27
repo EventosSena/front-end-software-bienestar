@@ -35,7 +35,7 @@ export class UpdateAprendizComponent {
       response  => {
 
         console.log(this.aprendiz);
-        alert('Registro exitoso')
+  
 
         setTimeout(() => {
 
