@@ -1,6 +1,10 @@
 <div class="title">
 	<h1>Lista Eventos</h1>
 </div>
+<div class="input-wrapper" >
+	<input type="text" name="search-box" class="search-box" [(ngModel)]="search" placeholder="Busca el evento por nombre o fecha">
+
+</div>
 
 <div class="table-wrapper-scroll-y my-custom-scrollbar">
 	
@@ -18,7 +22,7 @@
 		</tr>
 	  </thead>
 		<tbody *ngIf="  Event.length != 0">
-			<tr *ngFor="let events of Event">
+			<tr *ngFor="let events of Event | filter:search" >
 				<td>{{events.id}}</td>
 				<td>{{events.name}}</td>
 				<td>{{events.description}}</td>

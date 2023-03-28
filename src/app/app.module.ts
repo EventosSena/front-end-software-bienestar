@@ -24,6 +24,7 @@ import { SecurityGuard } from './components/security/security.guard';
 import { AttendanceComponent } from './components/attendance/attendance.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
+
 const appRoutes: Routes = [
   {path:'',component:HomeMainComponent},
   {path:'header',component:HeaderComponent},

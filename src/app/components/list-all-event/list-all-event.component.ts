@@ -10,7 +10,7 @@ import { EventService } from 'src/app/services/event/event.service';
 export class ListAllEventComponent {
 
   Event:any=[];
-
+  search:any;
   constructor(private serviceevent:EventService){}
   ngOnInit(): void {
   

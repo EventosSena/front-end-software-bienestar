@@ -10,6 +10,7 @@ import { ResponsibleService } from 'src/app/services/responsible/responsible.ser
 export class ListAllResponsibleComponent {
 
   responsible:any=[];
+  search:any;
 
   constructor(private serviceresponsible:ResponsibleService){}
   ngOnInit(): void {
