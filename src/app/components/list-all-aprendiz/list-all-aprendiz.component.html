@@ -1,6 +1,19 @@
 <div class="title">
 	<h1>Lista Aprendices</h1>
 </div>
+<div class="" >
+	<label >Escribe el documento del aprendiz</label>
+	<input type="text" name="search-box" class="search-box" [(ngModel)]="search">
+	<section class="search-results">
+	</section>
+	
+
+</div>
+
+	<!-- <div>
+		<input type="text" [(ngModel)] = "filter.contenido" name="contenido" (input)="listaprendiz()"
+		placeholder="hola" />
+	</div> -->
 
 <div class="table-wrapper-scroll-y my-custom-scrollbar">
 	
@@ -17,7 +30,7 @@
 		</tr>
 	  </thead>
 	  	<tbody *ngIf="  Aprendiz.length != 0">
-			<tr *ngFor="let Aprendices of Aprendiz">
+			<tr *ngFor="let Aprendices of Aprendiz | filter:search">
 				<td>{{Aprendices.document}}</td>
 				<td>{{Aprendices.full_name}}</td>
 				<td>{{Aprendices.email}}</td>
