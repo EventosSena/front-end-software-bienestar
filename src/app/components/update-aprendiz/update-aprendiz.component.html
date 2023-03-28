@@ -1,12 +1,15 @@
-<div class="login-container" *ngIf="aprendiz">
-  <div class="login-info-container">
-    <h1 class="title">Actualizar Aprendiz</h1>
-    <form class="inputs-container" (ngSubmit)="updateAprendiz()">
-        <input class="input" type="text" placeholder="Nombre Completo" [(ngModel)] = "aprendiz.full_name" id="name" name="name" >
-        <input class="input" type="number" placeholder="documento " [(ngModel)]= "aprendiz.document" id="document" name="document">
-        <input class="input" type="text" placeholder="correo" [(ngModel)]="aprendiz.email" id="email" name="email">
-        <input class="input" type="text" placeholder="Programa de formacion" [(ngModel)]="aprendiz.course" id=" course" name=" course">
-        <button class="btn" type="submit">Actualizar</button>
-    </form>
-  </div>
+<div class="body">
+  <form class="form"(ngSubmit)="updateAprendiz()">
+    <span class="title">Actualizar Aprendiz</span>
+    <span class="sub mb">Actualiza el aprendiz llenando los siguientes campos</span>
+    <input id="file" type="file">
+    <input class="input" type="number" placeholder="documento " [(ngModel)]= "aprendiz.document" id="document" name="document" disabled="true">
+    <input class="input" type="text" placeholder="Nombre Completo" [(ngModel)] = "aprendiz.full_name" id="name" name="name" >
+    <input class="input" type="text" placeholder="correo" [(ngModel)]="aprendiz.email" id="email" name="email">
+    <input class="input" type="text" placeholder="Programa de formacion" [(ngModel)]="aprendiz.course" id=" course" name=" course">
+
+    <button type="submit">Actualizar</button>
+  </form>
+
 </div>
+

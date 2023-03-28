@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Aprendiz } from 'src/app/models/Aprendiz';
@@ -34,13 +35,14 @@ export class UpdateAprendizComponent {
       response  => {
 
         console.log(this.aprendiz);
-        alert('Registro exitoso')
+  
 
         setTimeout(() => {
 
           this.router.navigate(["/listalllaprendiz"])
           
         }, 1000);
+        Swal.fire('Actualizacion  del aprendiz '+this.aprendiz.full_name+' fue exitoso')
       }
     );
   }

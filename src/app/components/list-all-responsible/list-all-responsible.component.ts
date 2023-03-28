@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import { Component } from '@angular/core';
 import { ResponsibleService } from 'src/app/services/responsible/responsible.service';
 
@@ -9,6 +10,7 @@ import { ResponsibleService } from 'src/app/services/responsible/responsible.ser
 export class ListAllResponsibleComponent {
 
   responsible:any=[];
+  search:any;
 
   constructor(private serviceresponsible:ResponsibleService){}
   ngOnInit(): void {
@@ -28,15 +30,33 @@ export class ListAllResponsibleComponent {
   }
 
   borrar(document: number) {
-    this.serviceresponsible.deleteResponsible(document).subscribe(
-      data =>{
-        console.log(data);
-        
-        this.responsible = data;
-        console.log(this.responsible);
-        window.location.reload()
+
+    Swal.fire({
+      title: 'Desea eliminar este registro? ',
+      showCancelButton: true,
+      confirmButtonText: 'Si',
+
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.serviceresponsible.deleteResponsible(document).subscribe(
+          data =>{
+            console.log(data);
+            
+            this.responsible = data;
+            console.log(this.responsible);
+            window.location.reload()
+          }
+        )
+        Swal.fire('El registro se elimino con exito')
+        setTimeout(() => {
+          
+          window.location.reload()
+         
+        },1000);
+ 
       }
-    )
+    })
+
   }
 
 }

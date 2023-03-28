@@ -109,12 +109,10 @@ color: white;
 background: #2751cd;
 }
 
-
-
 .title{
     height: 15vh;
     text-align: center;
-    padding: 7%;
+    padding: 6%;
 }
 
 .algo{
@@ -136,4 +134,17 @@ background: #2751cd;
     width: 90% ;
     text-align: center;
     margin: 0 5%;
+}
+
+
+.input-wrapper input {
+    background-color: #eee;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    width: 28em;
+    border-radius: 1rem;
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+    margin: 16px 72px;
 }

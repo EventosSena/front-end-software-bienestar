@@ -138,7 +138,7 @@ justify-content: space-around;
 gap: 500px;
 }
 
-/*header barberia*/
+
 
 .images img{
     border-radius: 50%;
@@ -190,7 +190,6 @@ transition: all 500ms ease;
 opacity: 0;
 visibility: hidden;
 z-index: 1;
-
 }
 #btn-menu:checked ~ .container-menu{
 opacity: 1;

@@ -22,6 +22,7 @@ import { ResgisterEventComponent } from './components/resgister-event/resgister-
 import { UpdateEventComponent } from './components/update-event/update-event.component';
 import { SecurityGuard } from './components/security/security.guard';
 import { AttendanceComponent } from './components/attendance/attendance.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 const appRoutes: Routes = [
@@ -34,7 +35,9 @@ const appRoutes: Routes = [
   {path:'constructor',component:ConstructionComponent},
   {path:'registerresponsible',component:RegisterResponsibleComponent},
   {path:'listallresponsible',component:ListAllResponsibleComponent},
+
   {path:'updateresponsible/:id',component:UpdateResponsibleComponent},
+
   {path:'registerevent',component:ResgisterEventComponent},
   {path:'listallevent',component:ListAllEventComponent},
   {path:'updateevent/:id',component:UpdateEventComponent},
@@ -65,6 +68,7 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule, 
     HttpClientModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

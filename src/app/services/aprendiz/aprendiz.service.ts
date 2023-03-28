@@ -31,7 +31,7 @@ export class AprendizService {
   updateAprendiz(id:number,aprendiz: Aprendiz): Observable<Aprendiz>{
 
     console.log(aprendiz);  
-    return this.httpcient.put<Aprendiz>(`http://localhost:8080/aprendiz/update/${aprendiz.id}`,aprendiz);  
+    return this.httpcient.put<Aprendiz>(`http://localhost:8080/aprendiz/update/${aprendiz.document}`,aprendiz);  
   }
 
   deleteAprendiz(id : Number):  Observable<any>{

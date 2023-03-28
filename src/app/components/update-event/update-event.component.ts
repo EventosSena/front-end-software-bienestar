@@ -33,7 +33,6 @@ export class UpdateEventComponent {
       response  => {
 
         console.log(this.event);
-        alert('Registro exitoso')
 
         setTimeout(() => {
 

@@ -1,14 +1,11 @@
-<div class="login-container" *ngIf="responsible">
-    <div class="login-info-container">
-      <h1 class="title">Actualizar Responsable</h1>
-      <form class="inputs-container" (ngSubmit)="updateresponsible()">
-          <input class="input" type="text" placeholder="Nombre Completo" [(ngModel)] = "responsible.full_name" id="name" name="name" >
-          <input class="input" type="number" placeholder="documento " [(ngModel)]= "responsible.document" id="document" name="document">
-          <input class="input" type="text" placeholder="correo" [(ngModel)]="responsible.email" id="email" name="email">
-          <input class="input" type="text" placeholder="Programa de formacion" [(ngModel)]="responsible.associated" id="associated" name="associated">
-          <button class="btn" type="submit">Actualizar</button>
-      </form>
-    </div>
-  </div>
-  
-  
+<div class="body"  *ngIf="responsible">
+  <form class="form"(ngSubmit)="updateresponsible()" >
+    <span class="title">Actualizar Responsable</span>
+    <span class="sub mb">Actualiza el responsable renombrando  los siguientes campos</span>
+    <input class="input" type="number" placeholder="documento " [(ngModel)]= "responsible.document" id="document" name="document" disabled="true">
+    <input class="input" type="text" placeholder="Nombre Completo" [(ngModel)] = "responsible.full_name" id="name" name="name" >
+    <input class="input" type="text" placeholder="correo" [(ngModel)]="responsible.email" id="email" name="email">
+    <input class="input" type="text" placeholder="Programa de formacion" [(ngModel)]="responsible.associated" id="associated" name="associated">
+      <button type="submit">Actualizar</button>
+  </form>
+</div>

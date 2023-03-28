@@ -1,9 +1,6 @@
 import Swal from 'sweetalert2';
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Aprendiz } from 'src/app/models/Aprendiz';
-import { Event } from 'src/app/models/Event';
-import { AprendizService } from 'src/app/services/aprendiz/aprendiz.service';
+import { Router } from '@angular/router';
 import { AttendanceService } from 'src/app/services/attendance/attendance.service';
 import { Attendance } from 'src/app/models/Attendance';
 
@@ -29,17 +26,24 @@ export class HomeMainComponent {
   
   saveAttendance() {
 
-    this.Attendanceservice.saveAttendance(this.a,this.b).subscribe(
-      response  => {
+    this.Attendanceservice.saveAttendance(this.a,this.b).subscribe({
+      next: (response) => {
+        console.log(response);
         console.log(this.attendance);
         setTimeout(() => {
           
-          this.router.navigate(["/listalllaprendiz"])
+          this.router.navigate(["/listallattendance"])
          
         }, 1000);
-        Swal.fire('Registro del aprendiz')
+        Swal.fire('Registro de la asistencia a sido exitoso')
+      },
+      error: (error) => {
+        console.log(error);
+        Swal.fire('algunos de los datos ingresados no exiten el la base de datos')
+          
       }
-    );
+    });
+  
   }
 
   

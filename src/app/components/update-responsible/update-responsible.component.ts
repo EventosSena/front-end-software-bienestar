@@ -34,7 +34,7 @@ export class UpdateResponsibleComponent {
       response  => {
 
         console.log(this.responsible);
-        alert('Registro exitoso')
+
 
         setTimeout(() => {
 
