@@ -19,7 +19,7 @@ export class AprendizService {
   }
 
   listAprendiz():  Observable<Aprendiz>{
-    return this.httpcient.get<Aprendiz>("https://curved-downtown-production.up.railway.app/aprendiz/consultall")
+    return this.httpcient.get<Aprendiz>("http://localhost:8080/aprendiz/consultall")
   }
 
   
